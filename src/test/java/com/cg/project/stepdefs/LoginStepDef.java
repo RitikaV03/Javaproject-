@@ -24,7 +24,8 @@ public class LoginStepDef {
 	public void setupScenarioEnv() {
 		driver = DriverFactory.getDriver();
                 driver.manage().window().maximize();
-                driver.manage().timeouts.implicitlywait(20,TIMEUNIT.Seconds)
+                driver.manage().timeouts.implicitlywait(20,TIMEUNIT.Seconds);
+                Thread.sleep(20,TIMEUNIT.Seconds);
 		pageBean = PageFactory.initElements(driver, LoginPageBean.class);
 	}
 
